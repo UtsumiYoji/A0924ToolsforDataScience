@@ -52,7 +52,7 @@ def main():
     print()
     for i in range(lines):
         if lines//2 > i:
-            for _ in range(lines//2-i):
+            for _ in range((lines+1)//2-1-i):
                 print(' ', end='')
             for _ in range(1+2*i):
                 print('*', end='')

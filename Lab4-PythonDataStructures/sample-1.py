@@ -12,13 +12,13 @@ def main():
     
     # 1. Calculate and print the average score for each student.
     for key, value in students.items():
-        avg = sum(key) / len(value)
+        avg = sum(value) / len(value)
         print(key, avg)
     
     # 2. Find and print the name of the student with the highest average score.
     max_avg = 0
     for key, value in students.items():
-        avg = sum(key) / len(value)
+        avg = sum(value) / len(value)
         if avg > max_avg:
             max_avg = avg
             max_student = key
@@ -27,7 +27,7 @@ def main():
     # 3. Find and print the name of the student with the lowest average score.
     min_avg = float('inf')
     for key, value in students.items():
-        avg = sum(key) / len(value)
+        avg = sum(value) / len(value)
         if avg < min_avg:
             min_avg = avg
             min_student = key
@@ -64,7 +64,7 @@ def main():
     
     # 4. Remove "pear" from the inventory and print the updated inventory.
     del inventory["pear"]
-    inventory.pop("pear") # return (20, 0.4)
+    # inventory.pop("pear") > return (20, 0.4)
     pprint(inventory)
     
     print()

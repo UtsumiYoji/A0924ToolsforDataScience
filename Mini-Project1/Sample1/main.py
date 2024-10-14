@@ -77,6 +77,8 @@ def view_task():
             +tasks[i]["deadline"].strftime("%Y-%m-%d")
             )
 
+# Define the priority order
+PRIORITY_ORDER = {"high": 1, "medium": 2, "low": 3}
 def suggest_task():
     # Before suggest the task, make sure there is a task
     if not tasks:
@@ -84,7 +86,7 @@ def suggest_task():
         return
     
     # Sort the tasks by deadline, then priority
-    sorted_tasks = sorted(tasks, key=lambda x: (x["deadline"], x["priority"]))
+    sorted_tasks = sorted(tasks, key=lambda x: (x["deadline"], PRIORITY_ORDER[x["priority"]]))
     
     # Pick up the first 3 tasks
     suggested_tasks = sorted_tasks[:3]

@@ -94,7 +94,14 @@ def main():
 
     plt.bar(categories, value1, label='Value 1')
     plt.bar(categories, value2, bottom=value1, label='Value 2')
-    plt.bar(categories, value3, bottom=[i+j for i,j in zip(value1, value2)], label='Value 3')
+
+    bottom_values = list()
+    for i in range(len(value1)):
+        bottom_values.append(value1[i] + value2[i])
+    plt.bar(categories, value3, bottom=bottom_values, label='Value 3')
+
+    # another way
+    # plt.bar(categories, value3, bottom=[i+j for i,j in zip(value1, value2)], label='Value 3')
 
     plt.xlabel('Categories')
     plt.ylabel('Values')

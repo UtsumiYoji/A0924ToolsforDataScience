@@ -1,0 +1,9 @@
+{
+    "monthly_income": 2400.0,
+    "category_budget": {
+        "Food": 400.0,
+        "Rent": 2300.0,
+        "Utilities": 100.0,
+        "Transport": 30.0
+    }
+}

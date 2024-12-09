@@ -1,10 +1,12 @@
 import os, json
 from datetime import datetime
-import pandas as pd
 
-from input_validation import InputValidation
+import pandas as pd
 from matplotlib import pyplot as plt
 import numpy as np
+
+from input_validation import InputValidation
+
 
 class FinanceTrackerApp():
     def __init__(self) -> None:
